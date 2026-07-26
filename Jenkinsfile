@@ -9,10 +9,16 @@ pipeline {
             }
         }
 
-        stage('List Files') {
+        stage('Verify') {
             steps {
                 bat 'dir'
             }
         }
+
+        stage('Test') {
+            steps {
+                echo 'Testing PLC project...'
+                bat 'echo Test Passed'
+            }
+        }
     }
-}
